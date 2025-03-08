@@ -6,7 +6,7 @@ const FinalPreview= ()=>{
   let contactdata=useSelector(state=>state.MyContact);
   let skilldata=useSelector(state=>state.MySkills);
   let expdata=useSelector(state=>state.MyExpirence);
-  let projectdata=useSelector(state=>state.MyProject)
+  let projectdata=useSelector(state=>state.MyProject);
 
   return(
     <div className="container mt-4">

@@ -1,6 +1,7 @@
 import LeftNav from "./navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
+import swal from "sweetalert";
 
 const BasicDetails =() =>{
    let basicdata=useSelector(state=>state.MyBasic);
@@ -23,7 +24,7 @@ const BasicDetails =() =>{
      };
      let mydata={type:"basic",info:userinfo}
       dispatch(mydata);
-      alert("Your Basic details saved successfully...");
+      swal(" Save Success", "Your Basic details saved successfully...", "success");
    }
   return(
     <div className="container mt-4">
@@ -55,8 +56,8 @@ const BasicDetails =() =>{
                     About Yourself : <textarea placeholder="Write about yourself" className="form-control" maxLength={200} onChange={obj=>setAbout(obj.target.value)} value={about} ></textarea>
 
                 </div>
-                <div className="card-footer bg-secondary text-white text-center"> 
-                    <button className="btn btn-warning mt-1" onClick={save} > Save & Continue </button>
+                <div className="card-footer bg-info text-white text-center"> 
+                    <button className="btn btn-danger mt-1" onClick={save}> Save & Continue </button>
                 </div>
           </div>
          </div>
